@@ -3,6 +3,7 @@
   --red: #C20001;
   --gray: #eff3f6;
   --black: #2f3133;
+  --blue: #3F5DB3;
 }
 
 * {
@@ -23,8 +24,4 @@ h1, h2, h3 {
 .container {
   max-width: 1200px;
   margin: 0 auto;
-}
-
-.teste {
-
 }

@@ -1,8 +1,9 @@
 var pokemons = []
 var listPokemonContentElement = document.querySelector('.list-content')
+var offSet = 0
 
 function fetchPokemons() {
-    fetch("https://pokeapi.co/api/v2/pokemon")
+    fetch(`https://pokeapi.co/api/v2/pokemon?offset=${offSet}`)
         .then((response) => response.json())
         .then((response) => Promise.all(response.results.map(pokemon => 
             fetch(pokemon.url)
@@ -26,6 +27,11 @@ function listPokemons() {
           <strong class="card-name">${pokemon.name}</strong>
     </div>
     `).join('')
+}
+
+function loadMore() {
+    offSet = offSet + 20
+    fetchPokemons()
 }
 
 fetchPokemons()

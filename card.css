@@ -1,5 +1,6 @@
 .card{
     min-width: 276px;
+    min-height: 276px;
     height: auto;
 
     box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.2);
@@ -15,14 +16,7 @@
 }
 
 .card-image{
-    height: 150px;
+    max-height: 150px;
     margin-bottom: 32px;
-}
-
-.card-id{
-
-}
-
-.card-name{
-
+    max-width: 150px;
 }
